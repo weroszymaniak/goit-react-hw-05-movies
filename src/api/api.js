@@ -21,7 +21,7 @@ export const fetchQuery = async query => {
   return response.data;
 };
 
-export const fetchActors = async id => {
+export const fetchCast = async id => {
   const response = await axios.get(
     `movie/${id}/credits?api_key=${API_KEY}&language=en-US`
   );
