@@ -16,9 +16,9 @@ export const fetchMoveDetails = async id => {
 
 export const fetchQuery = async query => {
   const response = await axios.get(
-    `search/movie?query=${query}&api_key=${API_KEY}`
+    `search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${query}`
   );
-  return response.data;
+  return response.data.results;
 };
 
 export const fetchCast = async id => {

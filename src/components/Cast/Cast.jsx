@@ -15,7 +15,10 @@ const Cast = () => {
       try {
         setLoading(true);
 
-        fetchCast(id);
+        fetchCast(id).then(cast => {
+          setCast(cast);
+        });
+        console.log(fetchCast(id));
       } catch {
         console.log('error');
       } finally {

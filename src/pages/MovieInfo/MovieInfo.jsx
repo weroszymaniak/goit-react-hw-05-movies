@@ -77,10 +77,10 @@ const MovieInfo = () => {
         <h3>Additional information</h3>
         <ul>
           <li>
-            <Link to={`${id}/cast`}>Cast</Link>
+            <Link to={`cast`}>Cast</Link>
           </li>
           <li>
-            <Link to={`${id}/reviews`}>Reviews</Link>
+            <Link to={`reviews`}>Reviews</Link>
           </li>
         </ul>
         <Outlet />

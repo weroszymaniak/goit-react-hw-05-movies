@@ -21,6 +21,7 @@ const Movies = () => {
       console.log('error');
     } finally {
       setLoading(false);
+      console.log(searchedMovies, 'thats it');
     }
   };
 

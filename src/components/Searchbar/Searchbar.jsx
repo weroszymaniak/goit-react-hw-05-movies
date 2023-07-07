@@ -13,6 +13,7 @@ const Searchbar = ({ onSearch }) => {
   const handleSubmit = e => {
     e.preventDefault();
     onSearch(query);
+    console.log(query);
   };
 
   return (

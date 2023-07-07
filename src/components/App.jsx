@@ -24,11 +24,13 @@ const App = () => {
 
           <Route path="/movies" element={<Movies />} />
 
-          <Route path="/movies/:id" element={<MovieInfo />} />
-          <Route path="/movies/:id/cast" element={<Cast />} />
-          <Route path="/movies/:id/reviews" element={<Rewievs />} />
+          <Route path="/movies/:id" element={<MovieInfo />}>
+            <Route path="/movies/:id/cast" element={<Cast />} />
+            <Route path="/movies/:id/reviews" element={<Rewievs />} />
+          </Route>
+
+          <Route path="*" element={<Home />} />
         </Route>
-        <Route path="*" element={<Home />} />
       </Routes>
     </Suspense>
   );
