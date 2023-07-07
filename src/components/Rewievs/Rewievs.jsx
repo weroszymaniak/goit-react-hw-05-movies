@@ -32,10 +32,10 @@ const Rewievs = () => {
       {loading && <Loader />}
       {rewievs.length !== 0 && (
         <div>
-          <ul>
+          <ul className={css.list}>
             {rewievs.map(rewiev => (
-              <li key={rewiev.id}>
-                <p>Author: {rewiev.author}</p>
+              <li key={rewiev.id} className={css.item}>
+                <p className={css.author}>Author: {rewiev.author}</p>
                 <p>{rewiev.content}</p>
               </li>
             ))}

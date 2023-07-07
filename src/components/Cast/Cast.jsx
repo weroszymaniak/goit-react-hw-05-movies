@@ -31,15 +31,16 @@ const Cast = () => {
   return (
     <div>
       {loading && <Loader />}
-      <ul>
+      <ul className={css.list}>
         {cast.map(({ id, profile_path, original_name, name, character }) => (
-          <li key={id}>
+          <li key={id} className={css.item}>
             <img
+              className={css.img}
               width="200px"
               src={
                 profile_path
                   ? `https://image.tmdb.org/t/p/w500${profile_path}`
-                  : `https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png`
+                  : `https://placehold.co/200x300?text=Photo+not+available`
               }
               alt={original_name}
             />

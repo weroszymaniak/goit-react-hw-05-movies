@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchMoveDetails } from 'api/api';
 import Loader from 'components/Loader/Loader';
+import css from './MovieInfo.module.css';
 
 const MovieInfo = () => {
   const { id } = useParams();
@@ -46,11 +47,14 @@ const MovieInfo = () => {
   } = movieInfo;
 
   return (
-    <div>
+    <div className={css.movieinfo}>
       <Link to={location.state?.from ?? '/'}>
-        <button type="button">Go back</button>
+        <button className={css.button} type="button">
+          Go back
+        </button>
       </Link>
       <img
+        className={css.img}
         width="300px"
         src={
           poster_path
@@ -67,7 +71,7 @@ const MovieInfo = () => {
         <h2>Overview</h2>
         <p>{overview}</p>
         <h2>Genres</h2>
-        <ul>
+        <ul className={css.list}>
           {genres.map(genre => (
             <li key={genre.id}>{genre.name}</li>
           ))}
@@ -75,12 +79,16 @@ const MovieInfo = () => {
       </div>
       <div>
         <h3>Additional information</h3>
-        <ul>
-          <li>
-            <Link to={`cast`}>Cast</Link>
+        <ul className={css.additional}>
+          <li className={css.item}>
+            <Link to={`cast`} className={css.link}>
+              Cast
+            </Link>
           </li>
-          <li>
-            <Link to={`reviews`}>Reviews</Link>
+          <li className={css.item}>
+            <Link to={`reviews`} className={css.link}>
+              Reviews
+            </Link>
           </li>
         </ul>
         <Outlet />

@@ -14,7 +14,11 @@ const TrendingMovies = ({ movies }) => {
       {movies &&
         movies.map(movie => (
           <li className={css.item} key={movie.id}>
-            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+            <Link
+              to={`/movies/${movie.id}`}
+              state={{ from: location }}
+              className={css.link}
+            >
               {movie.title}
             </Link>
           </li>

@@ -11,18 +11,21 @@ const Home = () => {
     const fetchTrendingList = () => {
       try {
         setLoading(true);
-        fetchTrendingMovies().then(trendingMovies => {
-          setMovies(trendingMovies);
-        });
+        if (movies.length < 20) {
+          fetchTrendingMovies().then(trendingMovies => {
+            setMovies(trendingMovies);
+          });
+        }
         console.log(movies);
       } catch {
         console.log('error');
+        alert('An error occurred while fetching the movies.');
       } finally {
         setLoading(false);
       }
     };
     fetchTrendingList();
-  }, []);
+  }, [movies]);
 
   return (
     <main>

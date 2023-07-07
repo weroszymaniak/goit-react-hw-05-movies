@@ -4,4 +4,22 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 40px;
+}
+.navi {
+  padding: 25px;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+.link {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 35px;
+  margin-left: 50px;
+  transition: color 0.5s, text-shadow 0.4s;
+}
+.link:hover {
+  color: rgb(106, 20, 186);
+  text-shadow: 4px -2px 10px rgba(66, 68, 90, 0.26);
 }

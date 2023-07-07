@@ -1,13 +1,11 @@
-.searchbar {
-  max-width: 90%;
-  padding: 30px;
-}
-.input {
-  border: 1px solid black;
-  margin-right: 25px;
-  padding: 10px;
+.movieinfo {
+  display: flex;
+  flex-direction: column;
 }
 
+.img {
+  margin: 25px;
+}
 .button {
   align-self: center;
   background-color: #fff;
@@ -37,6 +35,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-top: 25px;
 }
 
 .button:hover {
@@ -46,4 +45,25 @@
 
 .button:focus {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+.list {
+  list-style: none;
+}
+.additional {
+  list-style: none;
+}
+.item {
+  margin-top: 10px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s, font-weight 0.3s, font-size 0.3s;
+}
+
+.link:hover {
+  color: rgb(106, 20, 186);
+  font-weight: 500;
+  font-size: 20px;
 }

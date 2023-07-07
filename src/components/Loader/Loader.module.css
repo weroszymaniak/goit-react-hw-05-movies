@@ -6,6 +6,8 @@
   font-size: 48px;
   letter-spacing: 4px;
   box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 200px;
 }
 .loader::before {
   content: '';

@@ -5,11 +5,10 @@ import css from './Searchbar.module.css';
 const Searchbar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
-  //   zmiana w stanie przy zmianie w value inputu
   const handleInput = e => {
     setQuery(e.target.value);
   };
-  //po submicie funkcja onSearch
+
   const handleSubmit = e => {
     e.preventDefault();
     onSearch(query);
@@ -17,16 +16,23 @@ const Searchbar = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={css.searchbar} onSubmit={handleSubmit}>
       <input
+        className={css.input}
         type="text"
         name="query"
         autoFocus
         value={query}
         onChange={handleInput}
       ></input>
-      <button type="submit">Search</button>
+      <button className={css.button} type="submit">
+        Search
+      </button>
     </form>
   );
+};
+
+Searchbar.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 export default Searchbar;

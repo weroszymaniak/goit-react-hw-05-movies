@@ -8,9 +8,13 @@ export const Layout = () => {
   return (
     <div className={css.container}>
       <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
+        <nav className={css.navi}>
+          <Link to="/" className={css.link}>
+            Home
+          </Link>
+          <Link to="/movies" className={css.link}>
+            Movies
+          </Link>
         </nav>
       </header>
 
