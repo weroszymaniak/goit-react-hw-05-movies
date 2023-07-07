@@ -59,7 +59,7 @@ const MovieInfo = () => {
         src={
           poster_path
             ? `https://image.tmdb.org/t/p/w500${poster_path}`
-            : `https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png`
+            : `https://placehold.co/300x450?text=Photo+not+available`
         }
         alt={original_title}
       />
